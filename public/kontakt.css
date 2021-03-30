@@ -1,0 +1,16 @@
+.kirjuta {
+    padding-top: 60px;
+    font-size: 25;
+}
+
+h2 {
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.form-group {
+    width: 350px;
+}
+.nuppKontakt {
+    width: 350px;
+}

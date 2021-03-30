@@ -1,0 +1,39 @@
+.uudised-pealkiri {
+    padding-top: 60px;
+    font-size: 45px;
+    font-weight: 550;
+    color: black;
+}
+
+.uudised {
+    padding-top: 40px;
+    color: black;
+}
+
+.pealkiri {
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.kuupaev {
+    font-size: 18px;
+}
+
+.sisu {
+    font-size: 20px;
+}
+
+
+
+
+.paiskonteiner-uudised {
+    background: transparent url('pildid/guillaume-briard-lSXpV8bDeMA-unsplash.jpg') 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+
+@media screen and (min-width: 1470px) {
+    .paiskonteiner-uudised {
+        background: transparent url('pildid/untriosept-wz-Jhwiic2_ZA4-unsplash.jpg') 0% 0% no-repeat padding-box;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,277 @@
+body {
+    font-family:'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.paiskonteiner {
+    background: transparent url('pildid/Hills.png') 0% 0% no-repeat padding-box;
+    width: 100%;
+    height: 778px;
+}
+
+.paiserida {
+    padding-top: 37px;
+}
+
+.pais-logoala {
+    display: flex;
+}
+
+.pais-logo {
+    width: 90px;
+    height: 95px;
+    background-image: url(./pildid/klubilogo.png);
+    background-size: cover;
+    background-repeat: none;
+    color: black;
+}
+
+.pais-nimi {
+    font-weight: 800;
+    font-size: 33px;
+    letter-spacing: 0px;
+    color: #0B0B0B;
+    text-transform: uppercase;
+    width: 126px;
+    height: 75px;
+}
+
+.navbar {
+    text-align: right;
+    letter-spacing: 2.67px;
+    color: black;
+    opacity: 1;
+    text-transform: uppercase;
+}
+
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+.nav-link {
+    color: black !important;
+    font-weight: 600;
+}
+
+.pealkiri-tekstid {
+    padding-top:200px;
+}
+
+.pealkiri-tekstid > div {
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    color: #0B0B0B;
+    font-weight: 800px;
+}
+
+.pealkiri-tekstid h1 {
+    font-size: 75px;
+    font-weight: 800;
+}
+
+.pealkiri-tekstid h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 43px;
+}
+
+.pealkiri-tekstid h3 {
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.liblikasUks {
+    width: 75.3px;
+    height: 66px;
+    position: absolute;
+    margin-left: 415px;
+    margin-top: -32px;
+    object-fit: none;
+}
+
+.liblikasKaks {
+    width: 60px;
+    height: 32px;
+    position: absolute;
+    margin-top: 56px;
+    margin-left: -36px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2.25px;
+    border-radius: 0rem;
+    width: 247px;
+    height: 58px;
+    font-size: 12.5px;
+    font-weight: 600;
+}
+
+.suur-pilt {
+    width: 914px;
+    height: 914px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.vari {
+    width: 1091px;
+    height: 89px;
+    margin-top: -42px;
+    margin-left: -88px
+}
+
+.slaidide-tekst {
+    margin-top: 150px;
+}
+
+.slaidi-pealkiri {
+    color: gray;
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.slaidi-teine-pealkiri {
+    font-size: 54px;
+    letter-spacing: -1.08px;
+    font-weight: 600;
+    color: black;
+}
+
+.tekst {
+    font-size: 21px;
+}
+
+
+.esimene {
+    width: 309px;
+    height: 406px;
+    object-fit: cover;
+}
+
+.teine {
+    width: 309px;
+    height: 406px;
+    object-fit: cover;
+}
+
+.kolmas {
+    width: 309px;
+    height: 406px;
+    object-fit: cover;
+}
+
+.keskmine {
+    background-image: url(./pildid/Layer.png);
+    background-size: cover;
+    height: 351px;
+    margin-top: 20px;
+    opacity: 1;
+}
+
+.jumbotron h1 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1.83px;
+    
+}
+
+.jumbotron p {
+    color: white;
+    text-align: center;
+}
+
+.vaiksem-tekst {
+    font-size: 15px;
+}
+
+.pealkiri-keskel {
+    font-size: 30px;
+}
+
+.body-tekst {
+    margin-top: 240px;
+    padding-left: 100px;
+}
+
+.body-tekst h1{
+    font-size: 45px;
+    font-weight: 600;
+    color: black;
+}
+
+.body-tekst p {
+    font-size: 21px;
+}
+
+.jalus-pilt {
+    margin-top: 170px;
+}
+
+.suur-pilt2 {
+    width: 540px;
+    height: 521px;
+    object-fit: cover;
+    border-radius: 53% 52% 32% 77% / 55% 57% 52% 54%
+}
+
+.vari2 {
+    width: 490px;
+    height: 40px;
+    margin-top: -21px;
+    margin-left: 142px
+
+}
+
+
+.footer-logo {
+    display: flex;
+    color: black;
+}
+
+.footer-logo h2 {
+    font-weight: 800;
+    font-size: 27px;
+    text-transform: uppercase;
+}
+
+.logo2 {
+    width: 66px;
+    height: 58px;
+    background-image: url(./pildid/klubilogo.png);
+    background-size: cover;
+    background-repeat: none;
+}
+
+@media screen and (min-width:768px) {
+    .nav-item:not(:first-child) {
+        margin-left: 40px;
+    }
+    .pealkiri-keskel {
+        font-size: 45px;
+    }
+    .vaiksem-tekst {
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width: 1470px) {
+    .paiskonteiner {
+        background: transparent url('./pildid/Hills@2x.png') 0% 0% no-repeat padding-box;
+        width: 100%;
+        height: 778x;
+    }
+    .keskmine {
+        background: transparent url('./pildid/Layer@2x.png');
+    }
+}
+
+
