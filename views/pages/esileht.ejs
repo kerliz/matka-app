@@ -18,11 +18,11 @@
   <div class="paiskonteiner">
         <div class="container">
             <div class="row paiserida">
-                <div class="pais-logoala">
+                <a href="#" class="pais-logoala"> <!--suunata teisele lehele ja jooned alt ära-->
                     <div class="pais-logo"></div>
                     <div class="pais-nimi">puhas higi</div>
-                </div>                    
-                    <nav class="navbar  ml-auto navbar-expand-lg navbar-light bg-light">
+                </a>                    
+                    <nav class="navbar-nav ml-auto navbar-expand-md navbar-light bg-light">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                           <span class="navbar-toggler-icon"></span>
                         </button>
@@ -33,9 +33,6 @@
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="http://wpkonsult.ee/oppurid/veeb76/matkaklubi/uudised.html">Uudised</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Meist</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="http://wpkonsult.ee/oppurid/veeb76/matkaklubi/kontakt.html">Kontakt</a>
@@ -61,7 +58,7 @@
                     <h3>Tule liiguta ennast koos meiega</h3>
                 </div>
                 <br>
-                <button type="button" class="btn">Vaata tulevaid matku</button>
+                <button type="button" class="btn">Vaata kõiki matku</button>  <!-- vaja suunata teisele lehele--->
             </div>
             <div class="col-md-6 pealkiri-pilt d-none d-lg-block">
                 <img class="suur-pilt" src="./pildid/matk.png" alt="">
@@ -72,48 +69,34 @@
   </div>
 
 <div class="container mt-40">
-  <h2 class="text-left">Toimuvad matkad</h2>
+  <h2 class="text-left"> <%=matkad.length %> toimuvat matka</h2>
   <div class=col-md-4>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus quasi magnam animi, beatae harum voluptatibus molestias sunt nobis nisi id quaerat recusandae quas numquam illo iure consectetur iusto architecto nihil.</p>
   </div>
+
+
+  
   <div class="row ">
-      <div class="col-md-4 col-sm-12">
+
+    <% for (matk of matkad) { %>
+
+      <div class="col-lg-4 col-sm-12">
           <div class="box16">
-              <img class="" src="./pildid/slide1.png">
+              <img class="card" src="<%= matk.piltUrl %>">
               <div class="box-content">
-                  <h3 class="title">Rattamatk Tapal</h3>
+                  <h3 class="title"><%= matk.nimetus %></h3>
                   <span class="post"></span>
                   <ul class="social">
-                    <a class="btn btn-dark" href="#">Vaata lähemalt</a>
+                    <button type="button" class="btn btn-dark">Registreeru</button> <!--suunata registreerima-->
                   </ul>
               </div>
           </div>
+          
       </div>
-      <div class="col-md-4 col-sm-12">
-          <div class="box16">
-              <img class="teine"src="./pildid/slide2.png">
-              <div class="box-content">
-                  <h3 class="title">Kepikõnnimatk Tartus</h3>
-                  <span class="post"></span>
-                  <ul class="social">
-                    <a class="btn btn-dark" href="#">Vaata lähemalt</a>
-                  </ul>
-              </div>
-          </div>
-      </div>
-      <div class="col-md-4 col-sm-12">
-          <div class="box16">
-              <img class="kolmas" src="./pildid/slide3.png">
-              <div class="box-content">
-                  <h3 class="title">Süstamatk Kõrvemaal</h3>
-                  <span class="post"></span>
-                  <ul class="social">
-                    <button type="button" class="btn btn-dark">Vaata lähemalt</button>
-                  </ul>
-              </div>
-          </div>
-      </div>
+      <% } %>
   </div>
+  
+
 </div>
 
 

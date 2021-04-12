@@ -9,24 +9,24 @@ const matk1 = {
   nimetus: 'Rabamatk',
   osalejaid: 8,
   kuupaev: '2021-05-11',
-  registreerunud: ['Kati', 'Mati'],
+  registreerunud: ['Kalle'],
   vabuKohti: function () {
       return this.osalejaid - this.registreerunud.length;
   },
   kirjeldus: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus quasi magnam animi, beatae harum voluptatibus molestias sunt nobis nisi id quaerat recusandae quas numquam illo iure consectetur iusto architecto nihil.',
-  piltUrl: './pildid/slide1.png'
+  piltUrl: '/pildid/raba.jpg'
 }
 
 const matk2 = {
   nimetus: 'Rattamatk',
   osalejaid: 10,
   kuupaev: '2021-06-11 - 2021-06-20',
-  registreerunud: ['Rebase Rein'],
+  registreerunud: ['Kalle'],
   vabuKohti: function () {
       return this.osalejaid - this.registreerunud.length;
   },
   kirjeldus: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus quasi magnam animi, beatae harum voluptatibus molestias sunt nobis nisi id quaerat recusandae quas numquam illo iure consectetur iusto architecto nihil.',
-  piltUrl: './pildid/slide2.png'
+  piltUrl: '/pildid/ratas.jpg'
 }
 
 const matk3 = {
@@ -38,7 +38,7 @@ const matk3 = {
       return this.osalejaid - this.registreerunud.length;
   },
   kirjeldus: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus quasi magnam animi, beatae harum voluptatibus molestias sunt nobis nisi id quaerat recusandae quas numquam illo iure consectetur iusto architecto nihil.',
-  piltUrl: './pildid/slide3.png'
+  piltUrl: '/pildid/kanuu.jpg'
 }
 
 const matk4 = {
@@ -50,7 +50,7 @@ const matk4 = {
       return this.osalejaid - this.registreerunud.length;
   },
   kirjeldus: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus quasi magnam animi, beatae harum voluptatibus molestias sunt nobis nisi id quaerat recusandae quas numquam illo iure consectetur iusto architecto nihil.',
-  piltUrl: './pildid/slide3.png'
+  piltUrl: '/pildid/ratas2.jpg'
 }
 
 const koikMatkad = [
@@ -64,10 +64,10 @@ const koikMatkad = [
       kuupaev: '2021-07-01',
       registreerunud: [], 
       vabuKohti: function () {
-          return matk5.osalejaid - matk5.registreerunud.length;
+          return matk.this.osalejaid - matk.this.registreerunud.length;
       },
       kirjeldus: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus quasi magnam animi, beatae harum voluptatibus molestias sunt nobis nisi id quaerat recusandae quas numquam illo iure consectetur iusto architecto nihil.',
-      piltUrl: './pildid/slide3.png'
+      piltUrl: '/pildid/slide3.png'
     }
 ]
 
