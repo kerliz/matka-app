@@ -71,7 +71,30 @@ const koikMatkad = [
     }
 ]
 
+const registreerumised = []
 
+function lisaRegistreerimine(matkaIndeks, nimi, email, markus) {
+  //kontrollime, kas maktaIndeks on õige (>=0 ja < massiivi pikkusest)
+  if (matkaIndeks < 0 || matkaIndeks >= koikMatkad.length) {
+    return false;
+  } 
+  //kontrolli, kas registreerunute arv on täis
+  // lisame nime matkale registreerunute hulka
+  koikMatkad[matkaIndeks].registreerunud.push(nimi)
+  //moodustame registreerunu andmetest objekti ning lisame selle registreerumiste massiivi
+  const registreerunu = {
+    matkaIndeks,
+    nimi,
+    email,
+    markus
+  }
+  registreerumised.push(registreerunu)
+  console.log('Lisati uus registreerunu')
+  console.log(registreerunu)
+  console.log('Matk')
+  console.log(koikMatkad[matkaIndeks])
+  return true;
+}
 
 function naitaEsilehte(req, res) {
   const andmed = { matkad: koikMatkad }
@@ -84,8 +107,32 @@ function naitaMatkaInfot(req, res) {
   const matk = koikMatkad[indeks]
 
   console.log('Parameeter matkaIndeks: ' + req.params.matkIndeks)
-  const andmed = { matkaIndeks: indeks, matk: matk }
+  const andmed = { 
+    matkaIndeks: indeks, 
+    matk: matk 
+  }
   return res.render('pages/matkainfo', andmed)
+}
+
+
+function registreeriMatkale(req,res) {
+  const matkaIndeks = req.query.matkaIndeks
+  const nimi = req.query.nimi
+  const email = req.query.email
+  const markus = req.query.markus
+  const kasOnnestus = lisaRegistreerimine(matkaIndeks, nimi, email, markus)
+
+  //kui õnnestus, siis renderda mall, mis näitab, et registreerimine õnnestus.
+  //kui ei õnnestunud, siis renderda mall, mis näitab, et registreerimine ebaõnnestus
+  return res.render('pages/regamise_kinnitus', {kasOnnestus: kasOnnestus, matk: koikMatkad[matkaIndeks]})
+}
+
+function kontaktileht(req,res) {
+  return res.render('pages/kontakt')
+}
+
+function uudisteleht(req,res) {
+  return res.render('pages/uudised')
 }
 
 
@@ -95,4 +142,7 @@ express()
   .set('view engine', 'ejs')
   .get('/', naitaEsilehte)
   .get('/matkainfo/:matkIndeks', naitaMatkaInfot)
+  .get('/registreeri', registreeriMatkale)
+  .get('/kontakt', kontaktileht)
+  .get('/uudised', uudisteleht)
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
